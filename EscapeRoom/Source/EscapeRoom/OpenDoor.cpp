@@ -16,7 +16,6 @@ UOpenDoor::UOpenDoor()
 
 }
 
-
 // Called when the game starts
 void UOpenDoor::BeginPlay()
 {
@@ -29,13 +28,11 @@ void UOpenDoor::BeginPlay()
 
 void UOpenDoor::OpenDoor()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Door will open"));
 	Owner->SetActorRotation(FRotator(0.f,OpenAngle, 0.f));
 }
 
 void UOpenDoor::CloseDoor()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Door will close"));
 	Owner->SetActorRotation(FRotator(0.f, 0.f, 0.f));
 }
 

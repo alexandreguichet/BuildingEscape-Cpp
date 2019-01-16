@@ -38,9 +38,13 @@ private:
 	UPROPERTY(EditAnywhere) //Allows us to make this private variable editable in the Editor
 	float DoorCloseDelay = 1.f;
 
+	UPROPERTY(EditAnywhere)
+	float TriggerMass = 50.f;
+
 	float LastDoorOpenTime = 0.f;
 
-	AActor* ActorThatOpens; //Pawn inherits from actor
 	AActor* Owner; //the owningDoor;
+
+	float GetTotalMassOfActorsOnPlate(); //Returns total Mass in Kg
 };
 
